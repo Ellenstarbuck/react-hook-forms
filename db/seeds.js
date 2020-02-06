@@ -220,7 +220,38 @@ mongoose.connect( dbURI,
             image: 'https://media.wired.com/photos/5a7057448a9c06661bee69ab/master/pass/100b_cv100.jpg',
             synopsis: 'If a stranger offered you a briefcase containing a gun, 100 completely untraceable bullets, and incontrovertible evidence identifying the person responsible for the worst thing that\'s ever happened to you, and the promise of full immunity for your retribution, would you take it?',
             user: createdUsers[0]
-          } 
+          },
+          {
+            name: 'Sweet Tooth',
+            writer: 'Jeff Lemire',
+            publisher: 'Verigo',
+            genre: 'Science-Fiction/Fantasy',
+            image: 'https://images-na.ssl-images-amazon.com/images/I/81jA7xT8XrL.jpg',
+            synopsis: 'Sweet Tooth is an American comic book limited series written and drawn by Canadian Jeff Lemire and published by DC Comics\' Vertigo imprint. Dubbed by some as "Mad Max meets Bambi", it takes place in a mostly rural post-apocalyptic setting where some creatures are human/animal hybrids',
+            user: createdUsers[0]
+          },
+          {
+            name: 'The Boys',
+            writer: 'Garth Ennis',
+            publisher: 'Wildstorm/Dynamite Entertainment',
+            genre: 'Superhero',
+            image: 'https://kbimages1-a.akamaihd.net/bc789896-7322-4a66-a551-b85a99535740/1200/1200/False/the-boys-vol-8.jpg',
+            synopsis: 'The series is set between 2006–2008 in a world where superheroes exist. However, most of the superheroes in the series\' universe are corrupted by their celebrity status and often engage in reckless behavior, compromising the safety of the world.',
+            user: createdUsers[0]
+          },
+          {
+            name: 'Fell',
+            writer: 'Warren Ellis',
+            publisher: 'Image',
+            genre: 'Crime',
+            image: 'https://wtfdccomics.files.wordpress.com/2013/07/20130730-201611.jpg',
+            synopsis: 'Detective Richard Fell is transferred over the bridge from the big city to Snowtown, a feral district whose police investigations department numbers three and a half people (one detective has no legs). Dumped in this collapsing urban trashzone, Richard Fell is starting all over again.',
+            user: createdUsers[0]
+          }
+          
+          
+          
+          
         ])
       })
       .then(createdComics => console.log(`${createdComics.length} comics created`))
