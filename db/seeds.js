@@ -175,10 +175,52 @@ mongoose.connect( dbURI,
             image: 'https://images-na.ssl-images-amazon.com/images/I/91CQQ3b7V-L.jpg',
             synopsis: 'Ten years ago, Black Hammer and six other superheroes had saved Spiral City from the Anti-God, but in process became trapped in Rockwood, a timeless Twilight Zone-ish town. Shortly after the heroes arrive, Black Hammer dies. In the present, the six heroes live on Black Hammer farm with very little hope of ever escaping Rockwood.',
             user: createdUsers[0]
-          }
-          
-          
-            
+          },
+          {
+            name: 'Mister Miracle',
+            writer: 'Tom King',
+            publisher: 'DC',
+            genre: 'Superhero',
+            image: 'https://images-na.ssl-images-amazon.com/images/I/91aIf6cqmXL.jpg',
+            synopsis: 'Scott Free is the greatest escape artist who ever lived. Using the stage alter ego of Mister Miracle, he has made quite a career for himself showing off his acrobatic escape techniques. You might say Scott Free has everything so why isn\'t it enough? Mister Miracle has mastered every illusion, achieved every stunt, pulled off every trick except one. He has never escaped death. Is it even possible? Our hero is going to have to kill himself if he wants to find out.',
+            user: createdUsers[1]
+          },
+          {
+            name: 'Blankets',
+            writer: 'Craig Thompson',
+            publisher: 'Top Shelf Productions',
+            genre: 'Slice-of-life',
+            image: 'https://comic-watch.com/wp-content/uploads/2019/01/Blankets-8.jpg',
+            synopsis: 'Blankets is the story of a young man coming of age and finding the confidence to express his creative voice. Craig Thompson\'s poignant graphic memoir plays out against the backdrop of a Midwestern winterscape: finely-hewn linework draws together a portrait of small town life, a rigorously fundamentalist Christian childhood, and a lonely, emotionally mixed-up adolescence.',
+            user: createdUsers[1]
+          },
+          {
+            name: 'Hyperbole and a Half',
+            writer: 'Allie Brosh',
+            publisher: 'Square Peg',
+            genre: 'Slice-of-life',
+            image: 'https://images-na.ssl-images-amazon.com/images/I/81zcEZ7KJ5L.jpg',
+            synopsis: 'Hyperbole and A Half is a blog written by a 20-something American girl called Allie Brosh. She tells fantastically funny, wise stories about the mishaps of her everyday life, with titles like \'Why Dogs Don\'t Understand Basic Concepts Like Moving\' and \'The God of Cake\'. She accompanies these with naive drawings using Paint on her PC.',
+            user: createdUsers[0]
+          },
+          {
+            name: 'Criminal Vol 1',
+            writer: 'Ed Brubaker',
+            publisher: 'Marvel',
+            genre: 'Crime',
+            image: 'https://images-na.ssl-images-amazon.com/images/I/91hsjgUvI6L.jpg',
+            synopsis: 'The first of Ed Brubaker\'s Criminal stories is "Coward," following the twisting tale of a quirky, retired heist planner who is pulled back into the life for one last score (classic). The second, "Lawless," is about a disgraced soldier who infiltrates a heist crew to avenge his murdered brother (double classic). The series embraces and innovates upon the tropes of typical noir fair.',
+            user: createdUsers[0]
+          },
+          {
+            name: '100 Bullets',
+            writer: 'Brian Azzarello',
+            publisher: 'Verigo',
+            genre: 'Crime',
+            image: 'https://media.wired.com/photos/5a7057448a9c06661bee69ab/master/pass/100b_cv100.jpg',
+            synopsis: 'If a stranger offered you a briefcase containing a gun, 100 completely untraceable bullets, and incontrovertible evidence identifying the person responsible for the worst thing that\'s ever happened to you, and the promise of full immunity for your retribution, would you take it?',
+            user: createdUsers[0]
+          } 
         ])
       })
       .then(createdComics => console.log(`${createdComics.length} comics created`))
