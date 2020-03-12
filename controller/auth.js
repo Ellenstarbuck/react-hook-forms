@@ -2,6 +2,9 @@ const User = require('../models/user')
 const jwt = require('jsonwebtoken')
 const { secret } = require('../config/environment')
 
+//register and login requests to the backend
+
+//making the user
 function register(req, res) { 
   User
     .create(req.body)
@@ -9,6 +12,7 @@ function register(req, res) {
     .catch(err => res.json(err))
 }
 
+//login the user in
 function login(req, res) {
   User
     .findOne({ email: req.body.email })

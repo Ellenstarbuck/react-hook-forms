@@ -1,9 +1,9 @@
-//this is our control file. It needs to be able to talk to the chef taking the orders
+//backend controllers
 
 const Comic = require('../models/comic')
 
 
-
+//request to get all the comics
 function index(req, res) {
   Comic
     .find()
@@ -11,6 +11,7 @@ function index(req, res) {
     .catch(err => console.log(err))
 } 
 
+//request to make a new comic
 function create(req, res) {
   req.body.user = req.currentUser
   Comic 
@@ -19,6 +20,7 @@ function create(req, res) {
     .catch(err => console.log(err))
 }
 
+//request to show a single comic
 function show(req, res) {
   Comic
     .findById(req.params.id)
@@ -26,6 +28,7 @@ function show(req, res) {
     .catch(err => console.log(err))
 }
 
+//request to edit a comic the user has made
 function update(req, res) {
   Comic
     .findById(req.params.id)
@@ -38,6 +41,7 @@ function update(req, res) {
     .catch(err => console.log(err))
 }
 
+//request to delete a comic the user has made
 function destroy(req, res) { 
   Comic
     .findByIdAndDelete(req.params.id)
@@ -45,6 +49,7 @@ function destroy(req, res) {
     .catch(err => res.json(err))
 }
 
+//request to create comments
 function commentCreate(req, res, next) { 
   req.body.user = req.currentUser
   Comic
@@ -58,6 +63,7 @@ function commentCreate(req, res, next) {
     .catch(next)
 }
 
+//request to delete comments
 function commentDelete(req, res) { 
   Comic
     .findById(req.params.id)

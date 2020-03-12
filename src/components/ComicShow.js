@@ -39,6 +39,24 @@ class Comicshow extends React.Component{
     return Auth.getPayLoad().sub === this.state.comic.user
   }
 
+  isCommentOwner = comments => {
+    return comments.user._id === Auth.getUser()
+  }
+
+  handleCommentDelete = async (comments) => {
+    const comicId = this.props.match.params.id
+    const commentId = comments._id
+    try {
+      await axios.delete(`/api/comics/${comicId}/comments/${commentId}`,
+        {
+          headers: { Authorization: `Bearer ${Auth.getToken()}` }
+        })
+      this.props.history.push('/profile')
+    } catch (err) {
+      this.props.history.push('/notfound')
+    }
+  }
+
   render() {
     const { comic } = this.state
     if (!comic) return null
@@ -66,6 +84,9 @@ class Comicshow extends React.Component{
                 <h4 className="title-is-4">Synopsis</h4>
                 <p>{comic.synopsis}</p>
                 <br />
+                <h1 className='commentTitle'>Comment on this comic book!</h1>
+
+              
                 {this.isOwner() && 
                 <>
                   <Link to={`/comics/${comic._id}/edit`} className="button is-warning">Edit Comic</Link>
@@ -73,6 +94,7 @@ class Comicshow extends React.Component{
                   <button onClick={this.handleDelete} className="button is-danger">Delete Comic</button>
                 </>
                 }
+              
                 
               </div>
         

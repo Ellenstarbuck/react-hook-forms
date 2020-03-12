@@ -18,7 +18,7 @@ class ComicEdit extends React.Component{
   }
 
   async componentDidMount() {
-    const comicId = this.props.match.param.id
+    const comicId = this.props.match.params.id
     console.log(comicId)
     try {
       const res = await axios.put(`/api/comics${comicId}`)

@@ -1,7 +1,6 @@
 import React from 'react'
 import axios from 'axios'
 import Auth from '../lib/Auth'
-import { notify } from 'react-notify-toast'
 
 
 class Login extends React.Component{
@@ -13,7 +12,12 @@ class Login extends React.Component{
     error: ''
   }
 
-  handleChange = ({ target: { name, value } }) => {
+  
+  
+  handleChange = ({ target: { name, value } }) => { //update anything with key of name with the users value
+    //can't get to an object within an object so we are
+    //making a copy by using spread, putting the data object into a new object and then
+    //updating the value of username
     const data = { ...this.state.data, [name]: value }
     this.setState({ data, error: '' })
   }
@@ -24,7 +28,6 @@ class Login extends React.Component{
     try {
       const res = await axios.post('/api/login', this.state.data)
       Auth.setToken(res.data.token)
-      // notify.show(res.data.message, 'success', 3000)
       this.props.history.push('/comics')
     }  catch (err) {
       this.setState({ error: 'Incorrect Credentials' })
@@ -36,7 +39,7 @@ class Login extends React.Component{
       <section className="section">
         <div className="container">
           <div className="columns">
-            <form onSubmit={this.handleSubmit} className="column s-half is-offset-one-quarter">
+            <form onSubmit={this.handleSubmit} className="columns-half is-offset-one-quarter">
               <h2 className="title">Login</h2>
               <div className="field">
                 <label className="label">Email</label>

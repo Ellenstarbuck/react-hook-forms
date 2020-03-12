@@ -1,6 +1,9 @@
 import React from 'react'
 import axios from 'axios'
 
+<script src="https://kit.fontawesome.com/2bdb81dfcd.js" crossOrigin="anonymous"></script>
+
+
 class Register extends React.Component{
 
   state = {
@@ -33,6 +36,8 @@ class Register extends React.Component{
   }
 
 
+
+
   render() {
     return (
       <section className="section">
@@ -43,13 +48,16 @@ class Register extends React.Component{
               <h2 className="title has-text-centered">Register</h2>
               <div className="field">
                 <div className="label">Username</div>
-                <div className="control">
+                <div className="control has-icons-left">
                   <input className={`input ${this.state.errors.username ? 'is-danger' : ''}`}
                     placeholder="Username"
                     required
                     name="username"
                     onChange={this.handleChange}
                   />
+                  <span className="icon is-small is-left">
+                    <i className="fas fa-user"></i>
+                  </span>
                 </div>
                 {this.state.errors.username && <small className="help is-danger">{this.state.errors.username}</small>}
               </div>

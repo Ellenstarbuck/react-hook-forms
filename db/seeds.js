@@ -3,6 +3,9 @@ const { dbURI } = require('../config/environment')
 const Comic = require('../models/comic')
 const User = require('../models/user')
 
+
+//seed files for comics, with pre-made users for testing backend
+
 mongoose.connect( dbURI, 
   { useNewUrlParser: true , useUnifiedTopology: true }, (err, db ) => {
     if (err) return console.log(err)
