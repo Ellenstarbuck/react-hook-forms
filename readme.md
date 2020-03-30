@@ -74,6 +74,11 @@ The user can also upload their own comic book to the database via a form page
 
 ![comic form](https://i.imgur.com/CLMwWl6.png)
 
+**<h1>Wins and Key Learnings</h1>**
+
+A key win was successfully implementing code to filter through my database to only show specific genre types. The main key learning was building and successfully implementing my own API, deepening my own understanding of how to build more full stack applications in the future. 
+
+
 **<h1>Challenges and future improvements</h1>**
 
 We had a week of homework time to build the website. With more time I would like to continue styling it, build profiles for users, add likes and comments and change the way the user can submit a comic to the database. I built the back-end for the comments section but did not hook it up the front end due to time constraints. At the moment they are instructed to put a specfic genre in rather then having a drop down menu which gives them their options. 
