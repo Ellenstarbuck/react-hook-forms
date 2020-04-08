@@ -17,6 +17,7 @@ import ComicNew from './components/ComicNew'
 import ComicEdit from './components/ComicEdit'
 import Navbar from './common/Navbar'
 import SecureRoute from './common/SecureRoute'
+import ComicMaterial from './components/ComicMaterial'
 
 
 
@@ -30,6 +31,7 @@ const App = () => (
         <Route exact path="/"component={Home}/>
         <SecureRoute path="/comics/:id/edit"component={ComicEdit}/>
         <SecureRoute path="/comics/new"component={ComicNew}/>
+        <SecureRoute path="/comics/comicmaterial"component={ComicMaterial}/>
         <Route path="/comics/:id"component={Comicshow}/>
         <Route path="/comics"component={ComicIndex}/>
         <Route path="/register"component={Register}/>
