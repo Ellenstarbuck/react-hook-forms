@@ -9,7 +9,6 @@ class ComicIndex extends React.Component {
   async componentDidMount() {
     try {
       const res = await axios.get('/api/comics')
-      console.log(res.data)
       this.setState({ comics: res.data }) 
     } catch (err) {
       console.log(err)

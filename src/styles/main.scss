@@ -9,11 +9,20 @@
   width: 100%;
 }
 
-.paper {
-  margin-top: 10px;
-  display: flex;
+.root {
+  
+  flex-grow: 1;
   flex-direction: column;
   align-items: center;
+  margin-top: 10px;
+  
+}
+
+.paper {
+  margin-top: 10px;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px
 }
 
 .hero-body{

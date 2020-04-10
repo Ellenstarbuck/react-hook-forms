@@ -18,7 +18,8 @@ import ComicEdit from './components/ComicEdit'
 import Navbar from './common/Navbar'
 import SecureRoute from './common/SecureRoute'
 import ComicMaterial from './components/ComicMaterial'
-
+import ComicHooks from './components/ComicHooks'
+import ComicHooksForm from './components/ComicHooksForm'
 
 
 
@@ -30,6 +31,8 @@ const App = () => (
       <Switch>
         <Route exact path="/"component={Home}/>
         <SecureRoute path="/comics/:id/edit"component={ComicEdit}/>
+        <Route path="/comics/hooks"component={ComicHooks}/>
+        <Route path="/comics/hooksform"component={ComicHooksForm}/>
         <SecureRoute path="/comics/new"component={ComicNew}/>
         <SecureRoute path="/comics/comicmaterial"component={ComicMaterial}/>
         <Route path="/comics/:id"component={Comicshow}/>
